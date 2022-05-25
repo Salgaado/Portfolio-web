@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Portfólio website - Daniel Salgado</title>
+    </head>
+    <body>
+        
+        <header class="profile container">
+            <!-- Theme dark - light -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <div class="profile__container grid">
+               
+                <div class="profile__data">
+                    <div class="profile__border">
+                        
+                            
+                    <img src="perfil.png" alt="">
+                        
+                    </div>
+
+                    <h2 class="profile__name">Daniel Salgado</h2>
+                    <h3 class="profile__profession">Web developer</h3>
+
+                    <ul class="profile__social">
+                        <a href="https://www.instagram.com/daniel_saalgado/" target="_blank" class="profile__social-link">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/daniel-salgado-12831a1a6/" target="_blank" class="profile__social-link">
+                            <i class="ri-linkedin-box-line"></i>
+                        </a>
+                        <a href="https://github.com/Salgaado" target="_blank" class="profile__social-link">
+                            <i class="ri-github-line"></i>
+                        </a>
+                    </ul>
+                </div>
+                <div class="profile__buttons">
+                    
+                    <a download="" href="Curriculo Daniel Salgado.pdf" class="button">
+                        Download CV <i class="ri-download-line"></i>
+                    </a>
+                    <div class="profile__buttons-small">
+                        
+                        <a href="https://api.whatsapp.com/send?phone=5521979555251&text=Olá, te atenderei assim que puder!" target="_blank" class="button button__small button__gray">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        
+        <main class="main">
+<!----------------------------FILTRO/TOGGLE--------------------------------------->
+            <section class="filters container">
+
+                <ul class="filters__content">
+                    <button class="filters__button filter-tab-active" data-target="#projects">
+                        Projetos
+                    </button>
+                    <button class="filters__button filter-tab-active" data-target="#skills">
+                        Skills
+                    </button>
+                    <button class="filters__button filter-tab-active" data-target="#about">
+                        About
+                    </button>
+                </ul>
+
+                <div class="filters__sections">
+<!-------------------------------------PROJETOS--------------------------------------------------------------->
+                    <div class="projects__content grid filters__active" data-content id="projects">
+                
+                        
+                        <article class="projects__card">
+                            
+                            <img src="digitação.png" alt="" class="projects__img">
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Web</span>
+                                    <h3 class="projects__title">Teste de Digitação</h3>
+                                    <a href="#" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="to-do.png" alt="" class="projects__img">
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Web</span>
+                                    <h3 class="projects__title">To-do List</h3>
+                                    <a href="#" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="drum.png" alt="" class="projects__img">
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Web</span>
+                                    <h3 class="projects__title">Web Drum</h3>
+                                    <a href="#" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="clock.png" alt="" class="projects__img">
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Web</span>
+                                    <h3 class="projects__title">Web Clock</h3>
+                                    <a href="#" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="calc.png" alt="" class="projects__img">
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Web</span>
+                                    <h3 class="projects__title">Calculadora</h3>
+                                    <a href="#" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="projects__card">
+                            <img src="login.png" alt="" class="projects__img">
+
+                            <div class="projects__modal">
+                                <div>
+                                    <span class="projects__subtitle">Web</span>
+                                    <h3 class="projects__title">Login Page</h3>
+                                    <a href="#" class="projects__button button button__small">
+                                        <i class="ri-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+<!-------------------------------------SKILLS--------------------------------------------------------------->
+                    <div class="skills__content grid" data-content id="skills">
+                        <div class="skills__area">
+                            <h3 class="skills__title">Frontend Developer</h3>
+    
+                            <div class="skills__box">
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">HTML</h3>
+                                            <span class="skills__level">Avançado</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">CSS</h3>
+                                            <span class="skills__level">Avançado</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">JavaScript</h3>
+                                            <span class="skills__level">Intermediário</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="skills__group">
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">React</h3>
+                                            <span class="skills__level">Iniciante</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Bootstrap</h3>
+                                            <span class="skills__level">Intermediário</span>
+                                        </div>
+                                    </div>
+        
+                                    <div class="skills__data">
+                                        <i class="ri-checkbox-circle-line"></i>
+        
+                                        <div>
+                                            <h3 class="skills__name">Git</h3>
+                                            <span class="skills__level">Intermediário</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<!-------------------------------------ABOUT--------------------------------------------------------------->
+                    <div class="div__content flex" data-content id="about">
+                        <div class="div__img">
+                            <img src="img-about.png" alt="Foto de Daniel">
+                        </div>
+                        <div class="div__paraph">
+                            <p>
+                                Olá, espero que tenha gostado da experiência de ter entrado no meu portfólio, me chamo Daniel Salgado e tenho 27 anos e há 1 ano e 6 meses sou desenvolvedor web front-end, hoje estou em busca de experiências que me façam crescer como desenvolvedor web, que saiba explorar em mim o talento que precisam! 
+                                “Contrate sem experiência, crie talento”. Enjoy!
+                            </p>
+                            <div class="certificado__buttons">
+                                <a href="https://www.linkedin.com/in/daniel-salgado-12831a1a6/details/certifications/"  target="_blank" class="button">
+                                    Certificados 
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+
+
+        <footer class="footer container">
+            <span class="footer__copy">
+                 
+            </span>
+        </footer>
+        <script src="scrollreveal.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
