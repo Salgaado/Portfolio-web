@@ -181,11 +181,11 @@ body.dark-theme {
 }
 
 .profile__name {
-  font-size: var(--h2-font-size);
+  font-size: 40px;
 }
 
 .profile__profession {
-  font-size: var(--body-font) ;
+  font-size: 25px;
   font-weight: 200;
   color: var(--text-color);
   margin-bottom: 1rem;
@@ -249,7 +249,8 @@ body.dark-theme {
 .ri-messenger-line,
 .ri-moon-line,
 .ri-sun-line{
-  color:#EE6C4D !important;
+  color:#FFE135 !important;
+  font-size: 40px !important;
 }
 
 
@@ -258,35 +259,41 @@ body.dark-theme {
   display: inline-flex;
   align-items: center;
   column-gap: .5rem;
-  background-color:#EE6C4D ;
+  background-color:#FFE135;
   color: #fff;
   padding: 1.15rem 1.5rem;
   border-radius: .5rem;
   transition: .3s;
-  box-shadow: 0px 2px 10px #EE6C4D;
+  box-shadow: 0px 2px 10px #FFE135;
+}
+
+
+.button__cv{
+  font-weight: 700 !important;
+  color: black !important;
 }
 
 .certificado__buttons{
   display: inline-flex;
   align-items: center;
   row-gap: 10px !important;
-  background-color: #EE6C4D;
+  background-color: #ebcf32;
   color: #fff;
   padding: 1px 1px !important;
   border-radius: 0.5rem;
   transition: .3s;
-  box-shadow: 0px 2px 10px #ee6c4d;
+  box-shadow: 0px 2px 10px #FFE135;
 }
 .button i {
   font-size: 1.25rem;
 }
 
 .button:hover {
-  background-color:#CD3813;
+  background-color:#e6c408;
 }
 
 .button__small {
-  padding: .75rem;
+  padding: 0.50rem;
   box-shadow: none;
 }
 
@@ -406,7 +413,7 @@ body.dark-theme {
 }
 
 .skills__data i {
-  font-size: 1rem;
+  font-size: 2rem;
   color: var(--first-color);
 }
 
@@ -503,7 +510,7 @@ body.dark-theme {
 
 @media screen and (min-width: 776px) {
   .projects__content{
-    grid-template-columns: repeat(2, 332px);
+    grid-template-columns: repeat(3, 500px);
   }
   .skills__content {
     grid-template-columns: 332px;
@@ -568,7 +575,7 @@ body.dark-theme {
   }
 
   .skills__title {
-    font-size: var(--normal-font-size);
+    font-size: 30px;
     margin-bottom: 2.5rem;
   }
 
