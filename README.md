@@ -39,7 +39,7 @@ Este documento funciona como uma timeline viva do desenvolvimento do meu novo po
 - [x] Implementação da Home Section "Trabalhos em Destaque" filtrada automaticamente pelo CMS.
 
 ### Ponto Atual 📍
-O ecossistema base (UI/UX + Sistema de Projetos) está de pé e funcional. O site já tem uma "cara" robusta de SaaS e a navegação está rápida e animada. Já é possível ver meus trabalhos e stacks em produção.
+O ecossistema base (UI/UX + Sistema de Projetos) está de pé. Na última iteração, aplicamos a filosofia de design **Neo-Brutalism Tech (Anti-Safe Harbor)**. Removemos a dependência de "templates curvos" e implementamos uma topologia assimétrica 90/10 na Home, com tipografia *oversized*, *Acid Green accents* e grid rigoroso. O repositório está limpo, lint aprovado e versionado na branch `main`.
 
 ---
 
