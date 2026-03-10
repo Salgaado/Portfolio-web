@@ -4,14 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const navigation = [
-  { name: "Início", href: "/" },
-  { name: "Sobre", href: "/sobre" },
-  { name: "Projetos", href: "/projetos" },
-  { name: "Blog", href: "/blog" },
-  { name: "Lab", href: "/lab" },
-  { name: "Contato", href: "/contato" },
+  { name: "[ INÍCIO ]", href: "/" },
+  { name: "[ SOBRE ]", href: "/sobre" },
+  { name: "[ PROJETOS ]", href: "/projetos" },
+  { name: "[ BLOG ]", href: "/blog" },
+  { name: "[ LAB ]", href: "/lab" },
 ];
 
 export function Header() {
@@ -19,11 +19,18 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-background/80 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <header className="fixed top-0 z-50 w-full border-b-[1px] border-border bg-background">
+      <nav className="mx-auto flex w-full items-center justify-between px-6 py-4 lg:px-8" aria-label="Global">
+        
+        {/* Logo / Nome */}
         <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 text-lg font-bold tracking-tighter">
-            DANIEL SALGADO
+          <Link href="/" className="group flex items-center gap-2">
+            <span className="bg-primary text-primary-foreground font-mono font-bold px-2 py-1 text-sm tracking-tighter">
+              SYS
+            </span>
+            <span className="font-sans font-black text-xl tracking-tighter uppercase text-foreground group-hover:text-primary transition-colors">
+              Daniel Salgado
+            </span>
           </Link>
         </div>
         
@@ -31,24 +38,26 @@ export function Header() {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-zinc-400 hover:text-white"
+            className="inline-flex items-center justify-center border-[1px] border-border p-2 text-foreground hover:bg-primary hover:text-primary-foreground focus:outline-none transition-colors"
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Abrir menu</span>
-            <Menu className="h-6 w-6" aria-hidden="true" />
+            <Menu className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
         
         {/* Desktop menu */}
-        <div className="hidden lg:flex lg:gap-x-8">
+        <div className="hidden lg:flex lg:gap-x-6">
           {navigation.map((item) => {
             const isActive = pathname === item.href;
             return (
               <Link
                 key={item.name}
                 href={item.href}
-                className={`text-sm font-medium leading-6 transition-colors ${
-                  isActive ? "text-white" : "text-zinc-400 hover:text-white"
+                className={`font-mono text-xs font-semibold tracking-widest uppercase px-2 py-1 transition-all ${
+                  isActive 
+                    ? "bg-primary text-primary-foreground" 
+                    : "text-muted-foreground hover:text-primary hover:bg-white/5"
                 }`}
               >
                 {item.name}
@@ -57,54 +66,78 @@ export function Header() {
           })}
         </div>
         
+        {/* CTA */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/contato" className="text-sm font-semibold leading-6 bg-white text-zinc-950 px-4 py-2 rounded-full hover:bg-zinc-200 transition-colors">
-            Fale Comigo <span aria-hidden="true">&rarr;</span>
+          <Link 
+            href="/contato" 
+            className="group relative inline-flex items-center justify-center font-mono text-xs font-bold uppercase tracking-widest text-primary hover:text-primary-foreground transition-colors"
+          >
+            <span className="absolute inset-0 border-[1px] border-primary group-hover:bg-primary transition-colors"></span>
+            <span className="relative px-6 py-2 flex items-center gap-2">
+              <span className="w-2 h-2 bg-primary group-hover:bg-primary-foreground animate-pulse"></span>
+              Init_Contact()
+            </span>
           </Link>
         </div>
       </nav>
 
-      {/* Mobile menu overlay */}
-      {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-50 bg-background/95 backdrop-blur-md">
-          <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-white/10">
-            <div className="flex items-center justify-between">
-              <Link href="/" className="-m-1.5 p-1.5 text-lg font-bold tracking-tighter" onClick={() => setMobileMenuOpen(false)}>
-                DANIEL SALGADO
+      {/* Mobile menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="lg:hidden fixed inset-0 z-50 bg-background border-b-[1px] border-border h-max pb-6"
+          >
+            <div className="flex items-center justify-between px-6 py-4 border-b-[1px] border-border">
+              <Link href="/" className="flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
+                <span className="bg-primary text-primary-foreground font-mono font-bold px-2 py-1 text-sm tracking-tighter">
+                  SYS
+                </span>
               </Link>
               <button
                 type="button"
-                className="-m-2.5 rounded-md p-2.5 text-zinc-400 hover:text-white"
+                className="inline-flex items-center justify-center border-[1px] border-border p-2 text-foreground hover:bg-destructive hover:text-destructive-foreground focus:outline-none transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Fechar menu</span>
-                <X className="h-6 w-6" aria-hidden="true" />
+                <X className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
-            <div className="mt-6 flow-root">
-              <div className="-my-6 divide-y divide-white/10">
-                <div className="space-y-2 py-6">
-                  {navigation.map((item) => {
-                    const isActive = pathname === item.href;
-                    return (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        onClick={() => setMobileMenuOpen(false)}
-                        className={`-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 ${
-                          isActive ? "text-white bg-white/5" : "text-zinc-400 hover:bg-white/5 hover:text-white"
-                        }`}
-                      >
-                        {item.name}
-                      </Link>
-                    );
-                  })}
-                </div>
+            
+            <div className="mt-6 px-6">
+              <div className="space-y-4">
+                {navigation.map((item) => {
+                  const isActive = pathname === item.href;
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className={`block font-mono text-sm tracking-widest uppercase border-[1px] p-4 transition-colors ${
+                        isActive 
+                          ? "border-primary bg-primary/10 text-primary" 
+                          : "border-border text-muted-foreground hover:border-primary hover:text-primary"
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  );
+                })}
+                
+                <Link
+                  href="/contato"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block mt-8 w-full text-center bg-primary text-primary-foreground font-mono text-sm font-bold tracking-widest uppercase p-4"
+                >
+                  Init_Contact()
+                </Link>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }
