@@ -1,4 +1,4 @@
-export type Segment = 
+export type Segment =
   | "B2B"
   | "B2C"
   | "Saúde"
@@ -7,7 +7,9 @@ export type Segment =
   | "Dashboard"
   | "Varejo"
   | "Automotivo"
-  | "Educação";
+  | "Educação"
+  | "Jurídico"
+  | "Entretenimento";
 
 export type ProjectStatus = "Em Produção" | "Case Real" | "MVP" | "Conceito" | "Estudo";
 

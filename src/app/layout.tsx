@@ -8,7 +8,21 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
   title: "Daniel Salgado | Builder Digital",
-  description: "Portfólio de Daniel Salgado - Desenvolvedor Fullstack focado em e-commerce, SaaS e produtos digitais.",
+  description: "Portfólio de Daniel Salgado — Desenvolvedor Fullstack especializado em e-commerce, SaaS e produtos digitais escaláveis. TypeScript, Next.js, Node.js.",
+  keywords: ["Daniel Salgado", "desenvolvedor fullstack", "portfolio", "Next.js", "TypeScript", "e-commerce", "SaaS", "builder digital"],
+  authors: [{ name: "Daniel Salgado", url: "https://github.com/Salgaado" }],
+  openGraph: {
+    title: "Daniel Salgado | Builder Digital",
+    description: "Desenvolvedor Fullstack especializado em e-commerce, SaaS e produtos digitais escaláveis.",
+    type: "website",
+    locale: "pt_BR",
+    siteName: "Daniel Salgado",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Daniel Salgado | Builder Digital",
+    description: "Desenvolvedor Fullstack especializado em e-commerce, SaaS e produtos digitais.",
+  },
 };
 
 export default function RootLayout({

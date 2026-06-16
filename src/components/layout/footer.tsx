@@ -26,7 +26,7 @@ export function Footer() {
           <div>
             <h3 className="text-sm font-semibold mb-4 text-zinc-300">Conectar</h3>
             <div className="flex space-x-4 text-zinc-500">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              <a href="https://github.com/Salgaado" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 <span className="sr-only">GitHub</span>
                 <Github size={20} />
               </a>
@@ -34,7 +34,7 @@ export function Footer() {
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:contato@exemplo.com" className="hover:text-white transition-colors">
+              <a href="mailto:dansalgaado@gmail.com" className="hover:text-white transition-colors">
                 <span className="sr-only">Email</span>
                 <Mail size={20} />
               </a>
@@ -45,7 +45,7 @@ export function Footer() {
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-zinc-600">
           <p>© {new Date().getFullYear()} Daniel Salgado. Todos os direitos reservados.</p>
           <div className="mt-4 md:mt-0 space-x-4">
-            <span>Construído com Next.js, Tailwind e Antigravity</span>
+            <span>Construído com Next.js & Tailwind CSS</span>
           </div>
         </div>
       </div>

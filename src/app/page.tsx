@@ -58,7 +58,7 @@ export default function Home() {
                 <div className="space-y-4 font-mono text-xs uppercase tracking-widest">
                   <div className="flex justify-between w-full">
                     <span className="text-muted-foreground">Class:</span>
-                    <span className="text-foreground font-bold">Senior</span>
+                    <span className="text-foreground font-bold">Pleno/Mid</span>
                   </div>
                   <div className="flex justify-between w-full">
                     <span className="text-muted-foreground">Stack:</span>
